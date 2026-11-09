@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Nearby Dubai — find the nearest public services</title>
+  <meta name="description" content="Find the nearest free parking, bus stop, metro, mosque, pharmacy, hospital and other public services in Dubai. Open data from OpenStreetMap." />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📍 Nearby Dubai</h1>
+    <p class="tagline">Nearest public services, from open data</p>
+  </header>
+
+  <nav id="categories" aria-label="Categories"></nav>
+
+  <div id="controls">
+    <button id="locate" type="button">Use my location</button>
+    <label id="free-only-wrap" hidden>
+      <input type="checkbox" id="free-only" /> Free parking only
+    </label>
+    <span id="status" role="status"></span>
+  </div>
+
+  <main>
+    <div id="map" aria-label="Map"></div>
+    <ol id="results" aria-label="Results"></ol>
+  </main>
+
+  <footer>
+    Data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>,
+    via the Overpass API. Missing or wrong place? <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">Fix it on OSM</a> and it appears here for everyone.
+    · <a href="https://github.com/umairjallani/nearby-dubai" target="_blank" rel="noopener">Source on GitHub</a>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="categories.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
